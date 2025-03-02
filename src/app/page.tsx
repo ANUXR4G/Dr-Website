@@ -104,11 +104,7 @@ export default function Home() {
               <Phone className="h-12 w-12 text-[#c785ec] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
               <p className="text-gray-600">
-                Phone: (123) 456-7890
-                <br />
                 Email: info@healthcarepractice.com
-                <br />
-                Emergency: (123) 456-7899
               </p>
             </motion.div>
 
@@ -121,11 +117,7 @@ export default function Home() {
               <MapPin className="h-12 w-12 text-[#c785ec] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Location</h3>
               <p className="text-gray-600">
-                123 Medical Center Drive
-                <br />
-                Suite 200
-                <br />
-                Anytown, ST 12345
+              564, Jaipuria Rd, Opposite Kanpur Central, Harris Ganj, Rail Bazar, Mirpur Cantonment, Mirpur, Kanpur, Uttar Pradesh 208004
               </p>
             </motion.div>
           </div>
@@ -142,44 +134,43 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Specialities</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of medical services to meet your healthcare needs.
-            </p>
+            As a Gynecologist, we deal with reproductive care of women all through from getting your body prepared to delivery of a healthy child. We also handhold you post your pregnancy.            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Primary Care",
+                title: "Normal / C-Section",
                 description:
-                  "Comprehensive healthcare for patients of all ages, focusing on prevention, diagnosis, and treatment.",
+               " Our C-section recovery tips will help your uterus to encourage it to contract and shrink to its normal size.."
                 icon: "🩺",
               },
               {
-                title: "Specialized Medicine",
+                title: "High risk pregnancies",
                 description:
-                  "Expert care in various medical specialties to address specific health conditions and concerns.",
+                  "A high-risk pregnancy means a woman has one or more things that raise her — or her baby's — chances for health problems...",
                 icon: "🔬",
               },
               {
-                title: "Preventive Care",
-                description: "Proactive healthcare services designed to prevent illness and promote overall wellness.",
+                title: "laparoscopic ovarian cystectomy",
+                description: "In laparoscopic method, only the ovarian cyst is removed by preserving the ovarian tissue or ovaries.",
                 icon: "💪",
               },
               {
-                title: "Diagnostic Services",
-                description: "Advanced diagnostic testing and imaging to accurately identify health issues.",
+                title: "Hysteroscopy",
+                description: "Hysteroscopy is one of the tests a fertility doctor may prescribe to evaluate the possible causes of infertility.",
                 icon: "📊",
               },
               {
-                title: "Chronic Disease Management",
-                description: "Ongoing care and support for patients with long-term health conditions.",
+                title: "laparoscopic myomectomy",
+                description: "Myomectomy can be performed either by key hole approach or by open abdominal approach.",
                 icon: "❤️",
               },
               {
-                title: "Telemedicine",
-                description: "Virtual healthcare services for convenient consultations from the comfort of your home.",
+                title: "laparoscopic hysterectomy",
+                description: "A laparoscopic hysterectomy is a minimally invasive surgical procedure to remove the uterus.",
                 icon: "💻",
               },
             ].map((service, index) => (
@@ -284,7 +275,17 @@ export default function Home() {
           <Button asChild size="lg" className="bg-[#c785ec] hover:bg-[#B19CD9]">
             <Link href="/contact">Get in Touch</Link>
           </Button>
-        </div>
+          <div className="mt-8 w-full flex justify-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4646.519196785231!2d80.34881217626095!3d26.452542679713083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4794f885d19d%3A0xdfccd4d75acf7caf!2sDr%20Anita%20Singh!5e1!3m2!1sen!2sin!4v1740906938747!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>        </div>
       </motion.section>
     </div>
   )
