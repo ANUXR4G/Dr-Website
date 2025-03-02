@@ -2979,6 +2979,7 @@ __metadata:
     react-hook-form: "npm:^7.54.2"
     react-intersection-observer: "npm:^9.15.1"
     react-resizable-panels: "npm:^2.1.7"
+    react-simple-typewriter: "npm:^5.0.1"
     recharts: "npm:^2.15.1"
     sonner: "npm:^2.0.1"
     tailwind-merge: "npm:^3.0.2"
@@ -4925,6 +4926,16 @@ __metadata:
     react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
     react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
   checksum: 10c0/644a57960507b809f571bf8c95f07a04e3aeb9b20405a1d9d8cb6deb72d2462192e6e5e9751237347e7818179a619a6f65de4b355e276334d10b8cfe737ca4e1
+  languageName: node
+  linkType: hard
+
+"react-simple-typewriter@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "react-simple-typewriter@npm:5.0.1"
+  peerDependencies:
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10c0/a9bc04d401be922e86ba9e648bc61021613217f47d07705e0ae03e7fb60ea3f1163ba99834ef7211020550d2db818e460fe3512e2360e047742d5d98dce1344b
   languageName: node
   linkType: hard
 

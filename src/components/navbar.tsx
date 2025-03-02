@@ -14,10 +14,10 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   useEffect(() => {
@@ -34,6 +34,15 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
+  const handleType = (count: number) => {
+    // access word count number
+    console.log(count)
+  }
+  
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`)
+  }
 
   const services = [
     {
@@ -79,8 +88,25 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl sm:text-2xl font-bold text-[#B19CD9]">HealthCare</span>
-            <span className="text-xl sm:text-2xl font-bold text-white">Practice</span>
+          <div className='App'>
+      <h1 className="text-3xl">
+        Dr.{' '}
+        <span style={{ color: 'white', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Anita Singh']}
+            loop={false}
+            cursor
+            cursorStyle='_'
+            typeSpeed={100}
+            deleteSpeed={150}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            onType={handleType}
+          />
+        </span>
+      </h1>
+    </div>
           </Link>
 
           {/* Desktop Navigation */}

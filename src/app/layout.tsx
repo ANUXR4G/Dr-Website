@@ -9,8 +9,8 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "HealthCare Medical Practice",
-  description: "Professional healthcare services for you and your family",
+  title: "Dr Anita Singh",
+  description: "Specializes in women's reproductive health, pregnancy care, and gynecological treatments.",
 }
 
 export default function RootLayout({
