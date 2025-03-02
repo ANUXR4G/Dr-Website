@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-600 text-white">
+    <footer className="bg-[#c785ec] text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
           {/* About */}
@@ -123,7 +123,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-blue-500 pt-8 pb-8 text-center text-blue-100">
+        <div className="border-t border-[#ede7f6] pt-8 pb-8 text-center text-blue-100">
           &copy; {new Date().getFullYear()} HealthCare Practice. All rights reserved.
         </div>
       </div>
