@@ -28,7 +28,7 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         animate={headerInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.7 }}
-        className="bg-[#f694bc]"
+        className="bg-[#f694bc] py-20"
       >
         <div className="container mx-auto px-4 md:p-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Practice</h1>
