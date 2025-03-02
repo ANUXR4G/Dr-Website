@@ -107,10 +107,10 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         animate={headerInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.7 }}
-        className="bg-gradient-to-r from-blue-50 to-blue-100 py-20"
+        className="bg-[#f694bc] py-20"
       >
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Services</h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             Explore our comprehensive range of healthcare services designed to meet your needs at every stage of life.
           </p>
@@ -127,9 +127,14 @@ export default function ServicesPage() {
       >
         <div className="container mx-auto px-4 md:px-6">
           <Tabs defaultValue="primary-care" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+          <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8 bg-[#f694bc] p-1 rounded-lg">
               {services.map((service) => (
-                <TabsTrigger key={service.id} value={service.id}>
+                <TabsTrigger 
+                  key={service.id} 
+                  value={service.id}
+                  className="data-[state=active]:bg-[#f34887] data-[state=active]:text-white"//-
+                  className="text-white data-[state=active]:bg-[#f34887] data-[state=active]:text-white"//+
+                >
                   {service.title}
                 </TabsTrigger>
               ))}
