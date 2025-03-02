@@ -20,84 +20,75 @@ export default function ServicesPage() {
 
   const services = [
     {
-      id: "primary-care",
-      title: "Primary Care",
+      id: "normal-c-section",
+      title: "Normal / C-Section",
       description:
-        "Comprehensive healthcare for patients of all ages, focusing on prevention, diagnosis, and treatment of common illnesses and chronic conditions.",
+        "Childbirth can occur through two primary methods: Normal (Vaginal) Delivery and Cesarean (C-Section) Delivery. Both methods have their own benefits and risks, and the choice depends on medical conditions, complications, and personal preferences.",
       details: [
-        "Annual physical examinations",
-        "Preventive screenings",
-        "Immunizations",
-        "Management of chronic conditions",
-        "Acute illness treatment",
-        "Health education and counseling",
+       "Shorter Recovery Time",
+       "Lower Surgical Risks",
+       "Future Pregnancy Benefits"
       ],
       image: "/placeholder.svg?height=400&width=600",
     },
     {
-      id: "specialized-medicine",
-      title: "Specialized Medicine",
-      description: "Expert care in various medical specialties to address specific health conditions and concerns.",
-      details: ["Cardiology", "Dermatology", "Endocrinology", "Gastroenterology", "Neurology", "Orthopedics"],
+      id: "high-risk-pregnancies",
+      title: "High-Risk Pregnancies",
+      description: "A high-risk pregnancy is one in which the mother, baby, or both face an increased risk of health complications before, during, or after delivery. This condition may arise due to pre-existing health issues, pregnancy-related complications, or lifestyle factors. Proper medical care and monitoring are crucial to ensure a safe pregnancy and delivery.",
+      details: ["Specialized Monitoring & Care ", "Lifestyle & Nutritional Support", "Delivery Planning & NICU Support"],
       image: "/placeholder.svg?height=400&width=600",
     },
     {
-      id: "preventive-care",
-      title: "Preventive Care",
-      description: "Proactive healthcare services designed to prevent illness and promote overall wellness.",
+      id: "laparoscopic-ovarian-cystectomy",
+      title: "Laparoscopic Ovarian Cystectomy",
+      description: "Laparoscopic ovarian cystectomy is a minimally invasive surgical procedure used to remove cysts from the ovaries while preserving ovarian tissue. It is commonly performed when ovarian cysts cause pain, are large, or suspected to be abnormal. This technique involves small incisions through which a camera and surgical instruments are inserted, allowing precise removal with minimal damage.",
       details: [
-        "Wellness examinations",
-        "Health risk assessments",
-        "Lifestyle counseling",
-        "Nutritional guidance",
-        "Stress management",
-        "Smoking cessation programs",
+        "Minimally Invasive Procedure",
+        "Faster Recovery Time",
+        "Reduced Risk of Complications",
+        "Preservation of Fertility",
       ],
       image: "/placeholder.svg?height=400&width=600",
     },
     {
-      id: "diagnostic-services",
-      title: "Diagnostic Services",
-      description: "Advanced diagnostic testing and imaging to accurately identify health issues.",
+      id: "hysteroscopy",
+      title: "Hysteroscopy",
+      description: "Hysteroscopy is a minimally invasive procedure used to examine and treat conditions inside the uterus. A thin, lighted tube called a hysteroscope is inserted through the vagina and cervix into the uterus to diagnose or perform surgical procedures. It is commonly used for detecting abnormal bleeding, fibroids, polyps, or fertility issues.",
       details: [
-        "Laboratory testing",
-        "X-rays",
-        "Ultrasound",
-        "Electrocardiogram (ECG/EKG)",
-        "Spirometry",
-        "Allergy testing",
+        "Minimally Invasive Procedure",
+        "Quick Recovery",
+        "Fertility Benefits",
       ],
       image: "/placeholder.svg?height=400&width=600",
     },
     {
-      id: "chronic-disease-management",
-      title: "Chronic Disease Management",
-      description: "Ongoing care and support for patients with long-term health conditions.",
+      id: "laparoscopic-myomectomy",
+      title: "Laparoscopic Myomectomy",
+      description: "Laparoscopic myomectomy is a minimally invasive surgical procedure used to remove uterine fibroids (myomas) while preserving the uterus. It is performed using small incisions through which a laparoscope (a thin, lighted camera) and surgical instruments are inserted. This procedure is commonly recommended for women experiencing symptoms like heavy menstrual bleeding, pelvic pain, or infertility due to fibroids.",
       details: [
-        "Diabetes management",
-        "Hypertension control",
-        "Asthma and COPD care",
-        "Arthritis treatment",
-        "Heart disease management",
-        "Thyroid disorder treatment",
+        "Minimally Invasive Procedure",
+        "Preserves Uterine Function",
+        "Faster Recovery",
+        "Effective Treatment for Fibroids",
+        "Lower Risk of Complications",
       ],
       image: "/placeholder.svg?height=400&width=600",
     },
     {
-      id: "telemedicine",
-      title: "Telemedicine",
-      description: "Virtual healthcare services for convenient consultations from the comfort of your home.",
+      id: "laparoscopic-hysterectomy",
+      title: "Laparoscopic Hysterectomy",
+      description: "Laparoscopic hysterectomy is a minimally invasive surgical procedure used to remove the uterus through small incisions in the abdomen. A laparoscope (a thin, lighted camera) and surgical instruments are inserted to perform the surgery, reducing recovery time and post-operative pain compared to traditional open surgery. It is performed to treat fibroids, endometriosis, uterine prolapse, chronic pelvic pain, or cancer.",
       details: [
-        "Video consultations",
-        "Follow-up appointments",
-        "Prescription refills",
-        "Minor illness treatment",
-        "Chronic condition monitoring",
-        "Mental health check-ins",
+        "Minimally Invasive Approach",
+        "Faster Recovery",
+        "Indications for Surgery",
+        "Reduced Blood Loss & Complications",
+        "Better Quality of Life",
       ],
       image: "/placeholder.svg?height=400&width=600",
     },
   ]
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -126,7 +117,7 @@ export default function ServicesPage() {
         className="py-16 bg-white"
       >
         <div className="container mx-auto px-4 md:px-6">
-          <Tabs defaultValue="primary-care" className="w-full">
+          <Tabs defaultValue="normal-c-section" className="w-full">
           <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8 bg-[#f694bc] p-1 rounded-lg">
               {services.map((service) => (
                 <TabsTrigger 
@@ -182,133 +173,6 @@ export default function ServicesPage() {
           </Tabs>
         </div>
       </motion.section>
-
-      {/* Additional Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Beyond our core offerings, we provide these specialized services to support your health journey.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Women's Health",
-                description: "Comprehensive care addressing the unique health needs of women at every stage of life.",
-                icon: "👩‍⚕️",
-              },
-              {
-                title: "Men's Health",
-                description: "Specialized care focused on the specific health concerns and preventive needs of men.",
-                icon: "👨‍⚕️",
-              },
-              {
-                title: "Pediatric Care",
-                description: "Gentle, thorough healthcare for children from infancy through adolescence.",
-                icon: "👶",
-              },
-              {
-                title: "Geriatric Medicine",
-                description:
-                  "Specialized care for older adults, focusing on quality of life and managing age-related conditions.",
-                icon: "🧓",
-              },
-              {
-                title: "Mental Health Services",
-                description: "Supportive care for emotional wellbeing, including counseling and medication management.",
-                icon: "🧠",
-              },
-              {
-                title: "Nutrition Counseling",
-                description:
-                  "Personalized guidance on diet and nutrition to support overall health and manage specific conditions.",
-                icon: "🥗",
-              },
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <Button asChild variant="link" className="p-0 text-blue-600">
-                  <Link href="/contact">Learn More →</Link>
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Insurance */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-blue-50 rounded-lg p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="md:w-2/3">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Insurance & Payment Options</h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  We accept most major insurance plans and offer various payment options to make healthcare accessible
-                  to all our patients.
-                </p>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">We Accept:</h3>
-                <ul className="grid grid-cols-2 gap-2 mb-6">
-                  {[
-                    "Medicare",
-                    "Medicaid",
-                    "Blue Cross Blue Shield",
-                    "Aetna",
-                    "Cigna",
-                    "UnitedHealthcare",
-                    "Humana",
-                    "Kaiser Permanente",
-                  ].map((insurance, index) => (
-                    <li key={index} className="flex items-center">
-                      <div className="mr-2 h-2 w-2 rounded-full bg-blue-600"></div>
-                      <span className="text-gray-700">{insurance}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-gray-700">
-                  For patients without insurance, we offer self-pay options and payment plans. Please contact our office
-                  for more information.
-                </p>
-              </div>
-              <div className="md:w-1/3 flex justify-center">
-                <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-xs">
-                  <h3 className="text-xl font-semibold text-center mb-4">Have Questions?</h3>
-                  <p className="text-gray-600 text-center mb-6">
-                    Our billing specialists are here to help you understand your coverage and options.
-                  </p>
-                  <Button asChild className="w-full">
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience Our Care?</h2>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-            Schedule an appointment today and take the first step toward better health.
-          </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Book Your Appointment</Link>
-          </Button>
-        </div>
-      </section>
     </div>
   )
 }

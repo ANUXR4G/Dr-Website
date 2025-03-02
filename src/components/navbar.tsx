@@ -75,34 +75,34 @@ export default function Navbar() {
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {[
                         {
-                          title: "Primary Care",
-                          href: "/services#primary-care",
-                          description: "Comprehensive healthcare for patients of all ages",
+                          title: "Normal / C-Section",
+                          href: "/services#normal-c-section",
+                          description: " A natural childbirth process with quicker recovery and lower surgical risks.",
                         },
                         {
-                          title: "Specialized Medicine",
-                          href: "/services#specialized-medicine",
-                          description: "Expert care in various medical specialties",
+                          title: "High-Risk Pregnancies",
+                          href: "/services#high-risk-pregnancies",
+                          description: "Specialized care for conditions like hypertension, diabetes, or multiple pregnancies.",
                         },
                         {
-                          title: "Preventive Care",
-                          href: "/services#preventive-care",
-                          description: "Proactive healthcare services",
+                          title: "Laparoscopic Ovarian Cystectomy",
+                          href: "/services#laparoscopic-ovarian-cystectomy",
+                          description: "Minimally invasive removal of ovarian cysts with preserved ovarian function.",
                         },
                         {
-                          title: "Diagnostic Services",
-                          href: "/services#diagnostic-services",
-                          description: "Advanced diagnostic testing and imaging",
+                          title: "Hysteroscopy",
+                          href: "/services#hysteroscopy",
+                          description: "A non-invasive procedure to diagnose and treat uterine conditions like fibroids and polyps.",
                         },
                         {
-                          title: "Chronic Disease Management",
-                          href: "/services#chronic-disease-management",
-                          description: "Ongoing care for long-term conditions",
+                          title: "Laparoscopic Myomectomy",
+                          href: "/services#laparoscopic-myomectomy",
+                          description: "Fibroid removal surgery that preserves the uterus and improves fertility.",
                         },
                         {
-                          title: "Telemedicine",
-                          href: "/services#telemedicine",
-                          description: "Virtual healthcare services",
+                          title: "Laparoscopic Hysterectomy",
+                          href: "/services#laparoscopic-hysterectomy",
+                          description: "A minimally invasive uterus removal procedure with faster recovery and minimal pain.",
                         },
                       ].map((service, index) => (
                         <li key={index}>
