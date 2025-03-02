@@ -89,7 +89,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
           <div className='App'>
-      <h1 className="text-3xl">
+      <h1 className="text-3xl font-bold">
         Dr.{' '}
         <span style={{ color: 'white', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
@@ -100,7 +100,7 @@ export default function Navbar() {
             cursorStyle='_'
             typeSpeed={100}
             deleteSpeed={150}
-            delaySpeed={1000}
+            delaySpeed={4000}
             onLoopDone={handleDone}
             onType={handleType}
           />
