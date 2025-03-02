@@ -89,7 +89,7 @@ export default function Navbar() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#f34887] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#FF94BC] hover:text-gray-900 focus:bg-[#FF94BC] focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-[#FF94BC]/50 data-[state=open]:bg-[#FF94BC]/50">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#f34887] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#FF94BC] hover:text-gray-900 focus:bg-[#FF94BC] focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-[#f694bc]/50 data-[state=open]:bg-[#f694bc]/50">
                       Home
                     </NavigationMenuLink>
                   </Link>
