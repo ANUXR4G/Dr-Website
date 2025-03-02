@@ -38,7 +38,7 @@ export default function Navbar() {
     <header
   className={cn(
     "sticky top-0 z-50 w-full transition-all duration-300",
-    isScrolled ? "bg-[#c785ec] shadow-md py-2" : "bg-[#c785ec] backdrop-blur-sm py-4",
+    isScrolled ? "bg-[#f34887] shadow-md py-2" : "bg-[#f34887] backdrop-blur-sm py-4",
   )}
 >
       <div className="container mx-auto px-4 md:px-6">
@@ -55,7 +55,7 @@ export default function Navbar() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#c785ec] px-4 py-2 text-sm font-medium transition-colors hover:bg-[#D8BFD8] hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#f34887] px-4 py-2 text-sm font-medium transition-colors hover:bg-[#FF94BC] hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
                       Home
                     </NavigationMenuLink>
                   </Link>
@@ -63,14 +63,14 @@ export default function Navbar() {
 
                 <NavigationMenuItem>
                   <Link href="/about" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#c785ec] px-4 py-2 text-sm font-medium transition-colors hover:bg-[#D8BFD8] hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#f34887] px-4 py-2 text-sm font-medium transition-colors hover:bg-[#FF94BC] hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
                       About Us
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-[#c785ec]">Services</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-[#f34887]">Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {[
@@ -109,7 +109,7 @@ export default function Navbar() {
                           <NavigationMenuLink asChild>
                             <Link
                               href={service.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#D8BFD8] focus:bg-[#D8BFD8]"
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#FF94BC] focus:bg-[#FF94BC]"
                             >
                               <div className="text-sm font-medium leading-none">{service.title}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-gray-500">{service.description}</p>
@@ -123,7 +123,7 @@ export default function Navbar() {
 
                 <NavigationMenuItem>
                   <Link href="/contact" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#c785ec] px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-[#f34887] px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50">
                       Contact
                     </NavigationMenuLink>
                   </Link>

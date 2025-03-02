@@ -6,75 +6,63 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Clock, Phone, MapPin } from "lucide-react"
-import herologo from "../../public/image.png"
+import useEmblaCarousel from 'embla-carousel-react';
+import { useEffect } from 'react';
+import img1 from "../../public/img1.jpg";
+import img2 from "../../public/img2.jpg";
+import img3 from "../../public/img3.jpg";
 
 export default function Home() {
   const [heroRef, heroInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const [servicesRef, servicesInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const [testimonialsRef, testimonialsInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const [ctaRef, ctaInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
+
+  // Fix: Properly initialize Embla Carousel
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useEffect(() => {
+    if (emblaApi) {
+      const autoplay = () => {
+        emblaApi.scrollNext();
+      };
+      
+      const interval = setInterval(autoplay, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [emblaApi]);
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <motion.section
-        ref={heroRef}
-        initial={{ opacity: 0, y: 50 }}
-        animate={heroInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7 }}
-        className="relative bg-gradient-to-r from-blue-50 to-blue-100 py-20 md:py-32"
-      >
-        <video
-          src="/bg-video.mp4"
-          className="absolute top-0 left-0 w-full h-full object-cover "
-          autoPlay
-          loop
-          muted
-        />
-        <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center relative z-10">
-          <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Your Health Is Our Priority !! Welcome To Dr. Anita Singh's Clinic
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8">
-            564, Jaipuria Rd, Opposite Kanpur Central, Harris Ganj, Rail Bazar, Mirpur Cantonment, Mirpur, Kanpur, Uttar Pradesh 208004
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-[#c785ec] hover:bg-[#B19CD9]">
-                <Link href="/contact">Book Appointment</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/services">Our Services</Link>
-              </Button>
-            </div>
+      <div className="embla" ref={emblaRef}>
+        <div className="embla__container">
+          <div className="embla__slide">
+            <Image src={img1} className="object-cover h-full w-full" alt="Image1" />
           </div>
-          <div className="md:w-1/2 relative">
-            <Image
-              src={herologo}
-              alt="Medical professionals"
-              width={1200}
-              height={600}
-              className="rounded-lg shadow-xl"
-              priority
-            />
+          <div className="embla__slide">
+            <Image src={img2} className="object-cover h-full w-full" alt="Image2" />
+          </div>
+          <div className="embla__slide">
+            <Image src={img3} className="object-cover h-full w-full" alt="Image3" />
           </div>
         </div>
-      </motion.section>
+      </div>
 
       {/* Quick Info Section */}
       <section className="py-12 bg-white relative">
@@ -84,11 +72,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-col items-center text-center p-6 bg-[#EDE7F6] rounded-lg shadow-sm"
+              className="flex flex-col items-center text-center p-6 bg-[#FF94BC] rounded-lg shadow-sm"
             >
-              <Clock className="h-12 w-12 text-[#c785ec] mb-4" />
+              <Clock className="h-12 w-12 text-[#f34887] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Opening Hours</h3>
-              <p className="text-gray-600">
+              <p className="text-white">
                 Monday - Saturday: 4:00 PM - 8:00 PM
                 <br />
                 Sunday: 11:00 AM - 2:00 PM
@@ -99,11 +87,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col items-center text-center p-6 bg-[#EDE7F6] rounded-lg shadow-sm"
+              className="flex flex-col items-center text-center p-6 bg-[#FF94BC] rounded-lg shadow-sm"
             >
-              <Phone className="h-12 w-12 text-[#c785ec] mb-4" />
+              <Phone className="h-12 w-12 text-[#f34887] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-              <p className="text-gray-600">
+              <p className="text-white">
                 Email: info@healthcarepractice.com
               </p>
             </motion.div>
@@ -112,11 +100,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col items-center text-center p-6 bg-[#EDE7F6] rounded-lg shadow-sm"
+              className="flex flex-col items-center text-center p-6 bg-[#FF94BC] rounded-lg shadow-sm"
             >
-              <MapPin className="h-12 w-12 text-[#c785ec] mb-4" />
+              <MapPin className="h-12 w-12 text-[#f34887] mb-4" />
               <h3 className="text-xl font-semibold mb-2">Location</h3>
-              <p className="text-gray-600">
+              <p className="text-white">
               564, Jaipuria Rd, Opposite Kanpur Central, Harris Ganj, Rail Bazar, Mirpur Cantonment, Mirpur, Kanpur, Uttar Pradesh 208004
               </p>
             </motion.div>
@@ -144,7 +132,7 @@ export default function Home() {
               {
                 title: "Normal / C-Section",
                 description:
-               " Our C-section recovery tips will help your uterus to encourage it to contract and shrink to its normal size.."
+               " Our C-section recovery tips will help your uterus to encourage it to contract and shrink to its normal size..",
                 icon: "🩺",
               },
               {
@@ -179,7 +167,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={servicesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#EDE7F6] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="bg-[#FF94BC] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -205,7 +193,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={testimonialsInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.7 }}
-        className="py-16 bg-[#c785ec] text-white"
+        className="py-16 bg-[#f34887] text-white"
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
@@ -241,7 +229,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={testimonialsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#ede7f6] text-gray-800 p-6 rounded-lg shadow-md"
+                className="bg-[#FF94BC] text-gray-800 p-6 rounded-lg shadow-md"
               >
                 <p className="italic mb-4">"{testimonial.quote}"</p>
                 <div className="flex items-center">
@@ -272,7 +260,7 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-8">
             Contact us today to schedule an appointment or learn more about our services.
           </p>
-          <Button asChild size="lg" className="bg-[#c785ec] hover:bg-[#B19CD9]">
+          <Button asChild size="lg" className="bg-[#f34887] hover:bg-[#FF94BC]">
             <Link href="/contact">Get in Touch</Link>
           </Button>
           <div className="mt-8 w-full flex justify-center">
@@ -285,7 +273,8 @@ export default function Home() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>        </div>
+          </div>      
+        </div>
       </motion.section>
     </div>
   )
