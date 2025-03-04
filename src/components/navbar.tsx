@@ -173,77 +173,64 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Navigation */}
+          
           <div className="lg:hidden flex items-center">
-            <Button variant="outline" size="icon" className="mr-2 bg-white text-[#f34887] hover:bg-gray-100">
-              <Phone className="h-4 w-4" />
-              <span className="sr-only">Call</span>
-            </Button>
-            
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="bg-white text-[#f34887] hover:bg-gray-100">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <SheetTitle>Navigation Menu</SheetTitle>
-                <nav className="flex flex-col gap-4 mt-6">
-                  <Link
-                    href="/"
-                    className="block px-2 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 rounded-md"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="block px-2 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 rounded-md"
-                  >
-                    About
-                  </Link>
-                  
-                  <div>
-                    <button
-                      onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className="flex items-center justify-between w-full px-2 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 rounded-md"
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button
+            variant="outline"
+            size="icon"
+            className="bg-white text-[#f34887] hover:bg-gray-100 transition-colors duration-300 shadow-md"
+          >
+            <Menu className="h-6 w-6" />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[320px] sm:w-[400px] px-6 py-6 bg-white shadow-xl rounded-l-lg">
+          <SheetTitle className="text-2xl font-semibold text-[#f34887]">Navigation Menu</SheetTitle>
+          <nav className="flex flex-col gap-5 mt-6 text-gray-800">
+            <Link href="/" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+              Home
+            </Link>
+            <Link href="/about" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+              About
+            </Link>
+            <div>
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="flex items-center justify-between w-full px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg"
+              >
+                Services
+                <ChevronDown className={`h-5 w-5 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isServicesOpen && (
+                <div className="pl-5 mt-2 space-y-2 border-l-2 border-[#f34887]/30">
+                  {services.map((service) => (
+                    <Link
+                      key={service.title}
+                      href={service.href}
+                      className="block px-3 py-2 text-base hover:text-[#f34887] transition-colors duration-300"
                     >
-                      Services
-                      <ChevronDown
-                        className={`h-5 w-5 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
-                      />
-                    </button>
-                    
-                    {isServicesOpen && (
-                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#f34887]/20">
-                        {services.map((service) => (
-                          <Link
-                            key={service.title}
-                            href={service.href}
-                            className="block px-2 py-2 text-base hover:text-[#f34887]"
-                          >
-                            {service.title}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  
-                  <Link
-                    href="/contact"
-                    className="block px-2 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 rounded-md"
-                  >
-                    Contact
-                  </Link>
-                  
-                  <Link href="/contact">
-                  <Button className="mt-4 bg-[#f34887] text-white hover:bg-[#FF94BC]">
-                    Book Appointment
-                  </Button>
-                  </Link>
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            <Link href="/contact" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+              Contact
+            </Link>
+            <Link href="/contact">
+              <Button className="mt-5 bg-[#f34887] text-white hover:bg-[#FF94BC] transition-all duration-300 shadow-lg rounded-lg w-full py-3 text-lg">
+                Book Appointment
+              </Button>
+            </Link>
+          </nav>
+        </SheetContent>
+      </Sheet>
+    </div>
+
+
         </div>
       </div>
     </header>

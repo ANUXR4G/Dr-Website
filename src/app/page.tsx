@@ -82,19 +82,6 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col items-center text-center p-6 bg-[#FF94BC] rounded-lg shadow-sm"
-            >
-              <Phone className="h-12 w-12 text-[#f34887] mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-              <p className="text-white">
-                Email: info@healthcarepractice.com
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col items-center text-center p-6 bg-[#FF94BC] rounded-lg shadow-sm"
             >
