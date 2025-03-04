@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Menu, X, Phone, ChevronDown } from "lucide-react"
+import { Menu, Phone, ChevronDown } from "lucide-react"
 import {
   NavigationMenu,
   NavigationMenuContent,

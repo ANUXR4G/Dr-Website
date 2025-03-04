@@ -72,7 +72,7 @@ export default function AboutPage() {
                 with a team of specialists dedicated to improving the health and wellbeing of our patients.
               </p>
               <p className="text-lg text-gray-700">
-                Throughout our growth, we've remained committed to our founding principles: treating each patient with
+                Throughout our growth, we&apos;ve remained committed to our founding principles: treating each patient with
                 dignity and respect, staying at the forefront of medical advancements, and fostering a warm, welcoming
                 environment for all who walk through our doors.
               </p>

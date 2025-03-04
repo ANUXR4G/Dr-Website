@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Dr. Anita Singh</h3>
             <p className="text-blue-100 mb-4">
-            Specializes in women's reproductive health, pregnancy care, and gynecological treatments.
+            Specializes in women&apos;s reproductive health, pregnancy care, and gynecological treatments.
             </p>
             
           </div>

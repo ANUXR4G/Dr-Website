@@ -77,7 +77,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            We're here to help. Reach out to us with any questions or to schedule an appointment.
+            We&apos;re here to help. Reach out to us with any questions or to schedule an appointment.
           </p>
         </div>
       </motion.section>
@@ -94,7 +94,7 @@ export default function ContactPage() {
           <CardHeader>
             <CardTitle>Contact Form</CardTitle>
             <CardDescription>
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we&apos;ll get back to you as soon as possible.
             </CardDescription>
           </CardHeader>
           <CardContent>

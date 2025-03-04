@@ -13,10 +13,6 @@ import img2 from "../../public/img2.jpg";
 import img3 from "../../public/img3.jpg";
 
 export default function Home() {
-  const [heroRef, heroInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   const [servicesRef, servicesInView] = useInView({
     triggerOnce: true,
@@ -199,7 +195,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Patients Say</h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-              We're proud to have helped thousands of patients on their healthcare journey.
+              We&apos;re proud to have helped thousands of patients on their healthcare journey.
             </p>
           </div>
 
