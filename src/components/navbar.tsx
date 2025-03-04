@@ -186,19 +186,19 @@ export default function Navbar() {
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-[320px] sm:w-[400px] px-6 py-6 bg-white shadow-xl rounded-l-lg">
-          <SheetTitle className="text-2xl font-semibold text-[#f34887]">Navigation Menu</SheetTitle>
+        <SheetContent side="right" className="w-[320px] sm:w-[400px] px-6 py-6 shadow-xl rounded-l-lg bg-[#f34887]">
+          <SheetTitle className="text-2xl font-semibold text-white">Navigation Menu</SheetTitle>
           <nav className="flex flex-col gap-5 mt-6 text-gray-800">
-            <Link href="/" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+            <Link href="/" className="block px-3 py-3 text-lg font-medium bg-[#FF94BC] transition-all duration-300 rounded-lg">
               Home
             </Link>
-            <Link href="/about" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+            <Link href="/about" className="block px-3 py-3 text-lg font-medium bg-[#FF94BC] transition-all duration-300 rounded-lg">
               About
             </Link>
             <div>
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center justify-between w-full px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg"
+                className="flex items-center justify-between w-full px-3 py-3 text-lg font-medium bg-[#FF94BC] transition-all duration-300 rounded-lg"
               >
                 Services
                 <ChevronDown className={`h-5 w-5 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
@@ -217,11 +217,11 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link href="/contact" className="block px-3 py-3 text-lg font-medium hover:bg-[#FF94BC]/10 transition-all duration-300 rounded-lg">
+            <Link href="/contact" className="block px-3 py-3 text-lg font-medium bg-[#FF94BC] transition-all duration-300 rounded-lg">
               Contact
             </Link>
             <Link href="/contact">
-              <Button className="mt-5 bg-[#f34887] text-white hover:bg-[#FF94BC] transition-all duration-300 shadow-lg rounded-lg w-full py-3 text-lg">
+              <Button className="mt-5 bg-[#FF94BC] text-white hover:bg-[#FF94BC] transition-all duration-300 shadow-lg rounded-lg w-full py-3 text-lg">
                 Book Appointment
               </Button>
             </Link>
