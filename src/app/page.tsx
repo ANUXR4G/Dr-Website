@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Clock, Phone, MapPin } from "lucide-react"
+import { Clock, MapPin } from "lucide-react"
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect } from 'react';
 import img1 from "../../public/img1.jpg";
