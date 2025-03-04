@@ -121,13 +121,12 @@ export default function ServicesPage() {
           <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8 bg-[#f694bc] p-1 rounded-lg">
               {services.map((service) => (
                 <TabsTrigger 
-                  key={service.id} 
-                  value={service.id}
-                  className="data-[state=active]:bg-[#f34887] data-[state=active]:text-white"//-
-                  className="text-white data-[state=active]:bg-[#f34887] data-[state=active]:text-white"//+
-                >
-                  {service.title}
-                </TabsTrigger>
+                key={service.id} 
+                value={service.id}
+                className="text-white data-[state=active]:bg-[#f34887] data-[state=active]:text-white"
+              >
+                {service.title}
+              </TabsTrigger>
               ))}
             </TabsList>
 

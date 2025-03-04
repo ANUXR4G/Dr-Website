@@ -2,11 +2,12 @@
 
 import React, { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import img1 from "../../public/img1.jpg";
 import img2 from "../../public/img2.jpg";
 import img3 from "../../public/img3.jpg";
 
-function imgslide() {
+function ImgSlide() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   useEffect(() => {
@@ -27,17 +28,17 @@ function imgslide() {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         <div className="embla__slide">
-          <img src={img1} className='object-cover h-full w-full' alt='Image1' />
+          <Image src={img1} className='object-cover h-full w-full' alt='Image1' />
         </div>
         <div className="embla__slide">
-          <img src={img2} className='object-cover h-full w-full' alt='Image2' />
+          <Image src={img2} className='object-cover h-full w-full' alt='Image2' />
         </div>
         <div className="embla__slide">
-          <img src={img3} className='object-cover h-full w-full' alt='Image2' />
+          <Image src={img3} className='object-cover h-full w-full' alt='Image3' />
         </div>
       </div>
     </div>
   );
 }
 
-export default imgslide;
+export default ImgSlide;
