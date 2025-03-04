@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Menu, Phone, ChevronDown } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -229,8 +229,6 @@ export default function Navbar() {
         </SheetContent>
       </Sheet>
     </div>
-
-
         </div>
       </div>
     </header>
