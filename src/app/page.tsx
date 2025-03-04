@@ -227,7 +227,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-[#FF94BC] text-gray-800 p-6 rounded-lg shadow-md"
               >
-                <p className="italic mb-4">"{testimonial.quote}"</p>
+                <p className="italic mb-4">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center mr-3">
                     {testimonial.name.charAt(0)}
